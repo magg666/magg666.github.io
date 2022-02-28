@@ -1,0 +1,12 @@
+.container-fluid {
+    margin: 10px;
+    padding: 20px;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.img-col {
+    height: 400px;
+}
