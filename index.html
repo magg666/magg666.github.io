@@ -199,7 +199,7 @@
                     </div>
                 </div>
 
-                <form class="row g-3" onsubmit="event.preventDefault(); createCabinetAnswer()">
+                <form class="row g-3" onsubmit="event.preventDefault(); showHintForCabinet()">
                     <label for="cabinetLock" class="form-control border-0">Word lock</label>
                     <div class="col">
                         <input type="text" class="form-control" id="cabinetLock" maxlength="4" minlength="4" placeholder="AAAA">
@@ -286,7 +286,7 @@
                     </div>
                 </div>
 
-                <form class="row g-3" onsubmit="event.preventDefault()">
+                <form class="row g-3" onsubmit="event.preventDefault(); showHintForSafe()">
                     <label for="safePassword" class="form-control border-0">Safe lock</label>
                     <div class="col">
                         <input type="text" class="form-control" id="safePassword">
@@ -329,7 +329,7 @@
                     </div>
                 </div>
 
-                <form class="row g-3" onsubmit="event.preventDefault()">
+                <form class="row g-3" onsubmit="event.preventDefault(); showHintForComputer()">
                     <label for="computerPassword" class="form-control border-0">Password</label>
                     <div class="col">
                         <input type="text" class="form-control" id="computerPassword">
