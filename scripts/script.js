@@ -22,7 +22,7 @@ function isPrinterPasswordValid(answer) {
 
 //safe
 function isSafePasswordValid(answer) {
-    let strippedAnswer = answer.replace("/./g", "")
+    let strippedAnswer = answer.replace(/\./g, "")
     return strippedAnswer === '10015150'
 }
 
@@ -127,12 +127,11 @@ function showHintForCabinet() {
 
 // show hint for printer
 function showHintForPrinter() {
-    // !!!!! not ready
     let hints = new Array()
-    let inputId = "cabinetLock"
+    let inputId = "printerPassword"
     let isValid = isPrinterPasswordValid
-    let answerRowId = "cabinetHints"
-    let hint = createModal('oatmealModal', "/assets/oatmeal.png", "oatmealModalLabel", "Oatmeal Recipe", "Recipe for oatmeal with many different berries")
+    let answerRowId = "printerHints"
+    let hint = createModal('lawyerModal', "/assets/lawyer.png", "lawyerModalLabel", "Letter to lawyer", "Somebody from company steals money? That can't be good...")
     hints.push(hint)
 
     showHint(inputId, isValid, answerRowId, hints)
@@ -163,10 +162,10 @@ function showHintForComputer() {
     let isValid = isComputerPasswordValid
     let answerRowId = "computerHints"
     let hintOne = createModal('emailModal', "/assets/email.png", "emailModalLabel", "Email", "Looks like someone was irritated...")
-        // let hintTwo = createModal('bluntModal', "/assets/bluntNote.png", "bluntModalLabel", "Torn letter", "It seems that letter was attached to something...")
+    let hintTwo = createModal('stradivariusModal', "/assets/stradivarius.png", "stradivariusModalLabel", "Website", "Marcus loves music, but why this page?...")
 
     hints.push(hintOne)
-        //hints.push(hintTwo)
+    hints.push(hintTwo)
 
     showHint(inputId, isValid, answerRowId, hints)
 
@@ -179,11 +178,10 @@ function showHintsForPhone() {
     let inputId = "phonePassword"
     let isValid = isPhonePinValid
     let answerRowId = "phoneHints"
-    let hintOne = createModal('emailModal', "/assets/email.png", "emailModalLabel", "Email", "Looks like someone was irritated...")
-        // let hintTwo = createModal('bluntModal', "/assets/bluntNote.png", "bluntModalLabel", "Torn letter", "It seems that letter was attached to something...")
+    let hint = createModal('twitterModal', "/assets/twitter.png", "twitterModalLabel", "Twitter account", "Fresh local news")
 
-    hints.push(hintOne)
-        //hints.push(hintTwo)
+    hints.push(hint)
+
 
     showHint(inputId, isValid, answerRowId, hints)
 }
