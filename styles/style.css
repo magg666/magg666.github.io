@@ -10,3 +10,8 @@
 .img-col {
     height: 400px;
 }
+
+p {
+    font-size: larger;
+    line-height: 4vh;
+}
