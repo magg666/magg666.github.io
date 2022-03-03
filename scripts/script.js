@@ -158,10 +158,15 @@ function showHintForSafe() {
 // show hints for computer
 function showHintForComputer() {
     let hints = new Array()
+    let answerRowId = "computerHints"
+
+    let row = document.getElementById(answerRowId)
+    let emailPart = row.dataset.emailNumber
     let inputId = "computerPassword"
     let isValid = isComputerPasswordValid
-    let answerRowId = "computerHints"
-    let hintOne = createModal('emailModal', "/assets/email.png", "emailModalLabel", "Email", "Looks like someone was irritated...")
+    let emailImg = `/assets/email${emailPart}.png`
+
+    let hintOne = createModal('emailModal', emailImg, "emailModalLabel", "Email", "Looks like someone was irritated...")
     let hintTwo = createModal('stradivariusModal', "/assets/stradivarius.png", "stradivariusModalLabel", "Website", "Marcus loves music, but why this page?...")
 
     hints.push(hintOne)
@@ -173,12 +178,17 @@ function showHintForComputer() {
 
 // show hints for phone
 function showHintsForPhone() {
-    //!!! not ready
+
     let hints = new Array()
+
+    let answerRowId = "phoneHints"
+    let row = document.getElementById(answerRowId)
+    let twitterPart = row.dataset.twitterNumber
     let inputId = "phonePassword"
     let isValid = isPhonePinValid
-    let answerRowId = "phoneHints"
-    let hint = createModal('twitterModal', "/assets/twitter.png", "twitterModalLabel", "Twitter account", "Fresh local news")
+    let twitterImg = `/assets/twitter${twitterPart}.png`
+
+    let hint = createModal('twitterModal', twitterImg, "twitterModalLabel", "Twitter account", "Fresh local news")
 
     hints.push(hint)
 
